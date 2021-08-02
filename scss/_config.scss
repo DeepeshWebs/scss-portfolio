@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+$font-family: 'Montserrat', sans-serif;
+$primary: #0D2D38;
+$secondary: #C9A17A;
+$primary-gradient: linear-gradient(0deg,rgba($primary, 0.8),rgba($primary, 0.8));
+
+$padding: 15px;
+$margin: 15px;
+
+$transition: all 0.4s ease-in-out;
+
+$font-weights:(
+    regular: 400,
+    medium: 500,
+    bold: 700
+);
+
+@mixin bg-img{
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+@mixin d-flex($justify-content,$align-items,$direction){
+    display: flex;
+    justify-content: $justify-content;
+    align-items: $align-items;
+    flex-direction: $direction;
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
