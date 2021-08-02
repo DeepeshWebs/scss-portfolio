@@ -1,0 +1,70 @@
+@import 'responsive';
+
+
+section.home{
+    width: 100%;
+    height: 100vh;
+    background: $primary-gradient, url(../img/img01.jpg);
+    @include bg-img;
+    color: #fff;
+    @include d-flex(center,center,column);
+    h2{
+        font-size: 1.8rem;
+        font-weight: map-get($font-weights, regular);
+        text-align: center;
+    }
+    .home__name{
+        font-size: 5rem;
+        font-weight: map-get($font-weights, bold);
+        text-transform: uppercase;
+        text-align: center;
+        .last__name{
+            color: $secondary;
+        }
+        @include media-tab{
+            font-size: 3.8rem;
+            margin-bottom: $margin;
+        }
+        @include media-mob{
+            font-size: 3.4rem;
+            line-height: 3.4rem;
+            margin-bottom: $margin;
+        }
+    }
+    h3{
+        font-size: 1.5rem;
+        font-weight: map-get($font-weights, regular);
+        text-align: center;
+    }
+    .social-links{
+        position: fixed;
+        z-index: 2;
+        bottom: 30px;
+        left: 30px;
+        @include d-flex(center,center,column);
+        @include media-tab{
+            bottom: 15px;
+            left: 15px;
+        }
+        @include media-mob{
+            bottom: 15px;
+            left: 15px;
+        }
+        a{
+            margin: $margin 0;
+            font-size: 24px;
+            @include media-tab{
+                margin: $margin*1-5px 0;
+                font-size: 20px;
+            }
+            @include media-mob{
+                margin: $margin*1-8px 0;
+                font-size: 18px;
+            }
+            &:hover{
+                color: $secondary;
+                transition: $transition;
+            }
+        }
+    }
+}

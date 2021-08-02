@@ -1,0 +1,10 @@
+@mixin media-mob {
+    @media (max-width: 576px) {
+        @content;
+    }
+}
+@mixin media-tab {
+    @media (min-width: 577px) and (max-width: 768px){
+        @content;
+    }
+}
